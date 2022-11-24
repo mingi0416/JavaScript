@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        js에서 내장변수, 내장객체, 내장함수
+        내장은 미리 전문프로그래머가 구현해 놓은 것들을 의미.
+        .toFixed() alert()
+        window, document 내장객체
+
+        window 객체는 자바스크립트에서 전역을 담당하는 객체이다.
+        모든 객체의 최상위
+        대부분의 객체를 가지고 있어서 생략 가능하다
+        */
+        // alert("hi");
+        // window.alert("hi");
+        // window.document.write("hi");
+
+        /*
+        전역변수 : 프로그램이 실행되면 메모리에 올라가서 프로그램이 종료될 때 사라진다.
+                   모든지역에서 접근할 수 있다.
+        지역변수 : 해당 영역에서만 사용할 수 있다.
+                     선언할 때 메모리에 올라가서 해당 영역이 닫히면 메모리에서 사라진다.
+        */
+        //전역변수 선언하기
+        //script 안에 블럭없이 변수를 선언하면 전역변수
+        //특정영역에서 var없이 선언한 변수는 전역변수이다.
+        //var는  함수단위로 지역을 구분한다.
+
+        var a = 10; //전역변수이다(<script>안에서 선언해서).
+        b = 10; //전역변수 b 선언
+        {
+            var c = 20; //전역변수 c선언
+            d = 30; //전역변수 d 선언
+        }
+        console.log(window.a);
+        console.log(window.b);
+        console.log(window.c);
+        console.log(window.d);
+
+        //var는 함수단위를 지역변수로 취급한다.
+        //java의 변수같은 경우는 {}블럭단위로 지역변수 취급한다
+        //let 자바처럼 {}블럭단위로 지역변수 취급한다.
+
+        //함수 단위 코드
+        if(10>5){
+            var e=10;
+            f=20;
+        }
+        console.log(e);
+        console.log(f);
+
+        if(10>5){
+            let g=30;
+            h=40;
+        }
+        // console.log(g);
+        // console.log(h);
+        console.log(window.g);
+        console.log(window.h);
+
+        //const 블럭단위 const상수를 저장할 때 사용
+        //var 이미 선언된 변수를 초기화해서 다시 선언할 수 있다.
+        //let, const, java는 이미 선언된 변수를 다시 선언하는것을 허용하지 않는다.
+        const a1 = "hi";
+        // a1 = "bye"; //상수여서 변경이 불가능하다.
+        console.log(a);
+
+        function myFunction(){
+            var i=10; //지역변수
+            j=20; //전역변수
+        }
+        // console.log(i);
+        // console.log(j);
+        console.log(window.i);
+        console.log(window.j);
+        myFunction(); //실행되어야 생성;
+        // console.log(i);     //i가 지역변수여서 사라진다.
+        console.log(j);     //j는 전역변수여서 접근가능하다.
+        console.log(window.i); //undifined
+        console.log(window.j); //20 전역변수
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

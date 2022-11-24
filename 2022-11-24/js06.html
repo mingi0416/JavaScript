@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var result = prompt("성적은?", "여기입력");
+        // document.write(result + 10, "<br>");
+        // document.write(Number(result) + 10);
+
+        //Number(),parseFloat(),parseInt(),String()
+        var result = '14.5';
+        document.write(Number(result), "<br>");
+        document.write(parseFloat(result), "<br>");
+        document.write(parseInt(result), "<br>");
+        document.write(String(result), "<br>");
+
+        var result = '14';
+        document.write(Number(result), "<br>");
+        document.write(parseFloat(result), "<br>");
+        document.write(parseInt(result), "<br>");
+        document.write(String(result), "<br>");
+
+        var result = '14.5원';
+        document.write(Number(result), "<br>");
+        document.write(parseFloat(result), "<br>");
+        document.write(parseInt(result), "<br>");
+        document.write(String(result), "<br>");
+
+        // var result=confirm("사람인가요?");
+        // alert(result);
+        // var result = confirm("사람인가요?")?"확인됨":"아닌듯";
+        // alert(result);
+
+        //1.홀수, 짝수를 출력
+        var result = Number(prompt("수 입력>"));
+        result = result%2==0 ? "짝수" : "홀수";
+        alert(result);
+
+        // 2. 두 수중 큰 수 출력
+        var a = 10;
+        var b = 20;
+
+        var result = a>b ? a : a==b?"같음":b;
+        alert(result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

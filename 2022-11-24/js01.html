@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // /*   */ 자바스크립트 주석
+
+        /*
+        html 구조와 내용
+        css 스타일
+        javascript 프로그램을 담당
+
+        웹 개발자라면 반드시 3가지를 알고 있어야 한다
+
+        javascript를 이용해서 화면 출력하는 3가지 방법
+        */
+
+        document.write("Hello World");
+        /*
+        테스트용으로만 사용해야 한다. 화면이 전부 불려진다음에 호출하면
+        화면을 지우고 찍는다.
+        */
+
+        alert("Hello World1"); //메세지 박스로 출력
+        /*
+        사용하지 말것을 권장
+        */
+
+        console.log("HelloWorld2"); //디버그 창에 출력
+        // 객체를 출력하면 객체의 내용을 확인할 수 있다.
+
+
+    </script>
+</head>
+<body>
+    <div id="hello"></div>
+    <script>
+        //js는 헤더에 기술할 것을 권장한다
+        document.getElementById("hello").innerHTML="hellowolrd345";
+    </script>
+</body>
+</html>

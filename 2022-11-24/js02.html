@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/myalert.js"></script>
+    <script>
+        //js는 ;를 생략할 수 있다.
+
+        //js 작성위치
+        //1. 인라인 형
+        //2. 내장형
+        //3. 외장형
+        alert("내장형");
+        function myFunction(){
+            document.write("함수호출");
+        }
+        myFunction();
+
+
+    </script>
+</head>
+<body>
+    <button onclick="alert('인라인')">클릭</button>
+    <button onclick='alert("인라인")'>클릭</button>
+    <!-- html, js, 최근나온 언어는 '' "" 를 같은것으로 봄. 자바는 다른것으로 봄 문자,문자열 -->
+    <!-- <button onclick="alert('인라인')">클릭</button> -->
+    <button onclick='myFunction()'>클릭</button>
+</body>
+</html>
